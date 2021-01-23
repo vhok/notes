@@ -1,9 +1,13 @@
 # MarkDown Cheat Sheet
 ## Text
 This is normal text.
+
 This is ** bold ** text.
+
 This is * italic * text.
+
 This is ~~strikthrough~~ text.
+
 > This is a blockquote.
 
 ## Lists

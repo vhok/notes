@@ -28,6 +28,26 @@ const doSomething = (parameter) => {
 };
 ```
 
+## Key Array Methods
+Mapping
+```javascript
+array.map( function(element) {
+  return element * 10;
+});
+```
+Filter
+```javascript
+array.filter( function(element) {
+  return element > 0 ? true : false;
+});
+```
+Reduce
+```javascript
+array.reduce( function(total, element) {
+  return total += element;
+});
+```
+
 ## Common Array Methods & Properties
 ```javascript
 array.lengthl

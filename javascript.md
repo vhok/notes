@@ -2,7 +2,7 @@
 
 ## 3 Methods for Writing Function Definition
 Function Declaration  
-- Creates assigns a value to a variable with identifier doSomething in the **current scope**.
+- Assigns a value to a variable with identifier doSomething in the **current scope**.
 - Variable is **hoisted** to the top of current slope.
   
 Tips:  

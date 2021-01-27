@@ -44,7 +44,7 @@ array.filter( function(element) {
 Reduce
 ```javascript
 array.reduce( function(total, element) {
-  return total += element;
+  return total + element;
 });
 ```
 

@@ -89,8 +89,10 @@ array.slice(indexStart, indexEnd);
 ## Primitive Types
 | Type | Notes |
 | --- | --- |
-| number, NaN | number | NaN is a number because javascript expects a number. |
+| number, NaN | number | NaN is a number because JavaScript expects a number. |
 | string |  |
 | boolean | true/false |
-| BigInt | Enables expressions of numbers greater than 2⁵³ - 1. |
-| Symbol | Represents something unique. Primarily used as an identifier for object properties. |
+| BigInt | Enables expressions of numbers greater than 2⁵³ - 1. const bigNumber = BigInt(someBigNumber) |
+| Symbol | Represents something unique. Primarily used as an identifier for object properties. let sym = Symbol() or let sym = Symbol('foo') |
+| Null | Is a type object by lack of foresight in JavaScript implementation. Absence of a value where it's expected. |
+| undefined | Is a type undefined. No value. |

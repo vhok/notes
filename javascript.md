@@ -88,6 +88,7 @@ array.slice(indexStart, indexEnd);
 
 ## Primitive Types
 | Type | Notes |
+| --- | --- |
 | number, NaN | number | NaN is a number because javascript expects a number. |
 | string |  |
 | boolean | true/false |

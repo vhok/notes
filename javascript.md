@@ -42,7 +42,7 @@ array.filter( function(element) {
 });
 ```
 Reduce  
--In addition to the callback function it accepts an optional argument to indicate initial startint value for total.  
+-In addition to the callback function, an optional argument to initialize total can be passed.  
 -If no value is specified, it defaults to the object type to match that of the array elements.
 ```javascript
 array.reduce( function(total, element) {

@@ -52,23 +52,37 @@ array.reduce( function(total, element) {
 
 ## Common Array Methods & Properties
 ```javascript
-array.lengthl
+array.length
 
-array.forEach( function(element, index, array) ) {
+array.forEach( function(element, index, array) ) {}; 
+// description: Loops over elements. Executes a callback with each iteration.
+// optional: index, array
 
-};
+array.push(item); 
+// description: Adds an element to the end of the array.
 
-array.push(item);
+array.pop(); 
+// description: Removes an element from the end of the array.
+// return: removed element
 
-array.pop();
+array.unshift(item); 
+// description:Adds an element to the the start of the array.
 
-array.shift();
+array.shift(); 
+// description: Removes an element from the start of the array.
+// return: removed elemenbt
 
-array.unshift(item);
+array.indexOf(item); 
+// description: Returns the index of the first occurrence of a searched item.
 
-array.indexOf(item);
+array.splice(index, numberOfItemsToRemove); 
+// description: Removes elements from array. If index is negative, reads from end of array.
+// optional: numberOfItemsToRemove
+// return: new array with items removed
 
-array.splice(index, numberOfItemsToRemove);
+array.slice(indexStart, indexEnd); 
+// description: Copies the array. If a negative indexStart is specified, will extract from last elemnent.
+// optional: indexStart, indexEnd
+// return: copied array
 
-array.slice();
 ```

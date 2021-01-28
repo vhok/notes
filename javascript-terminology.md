@@ -1,6 +1,6 @@
 
 # JavaScript Terminology
-What the **rumpelstiltskin principle** has taught us is that to be able to name something empowers you over that which is being named. In modern terms, "name it to tame it". I noticed that it was easier for me to memorize the terms through understanding the *differences* between them. It had the added benefit of creating an association between related terms rather than rotely memorizing a definition. Therefore, you won't see me writing this document in a glossary style way.
+What the **rumpelstiltskin principle** has taught us is that to be able to name something empowers you over that which is being named. In modern terms, "name it to tame it". I noticed that it was easier for me to memorize the terms through understanding the *differences* between them (nuances). It had the added benefit of creating an association between related terms rather than rotely memorizing a definition. Therefore, you won't see me writing this document in a glossary style way.
 ## Expressions vs. Statements
 A **statement** is an instruction that is executed by a program, whereas, an **expression** is a piece of code that produces a value.
 ## Callback Function vs. Function Definition

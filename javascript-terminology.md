@@ -1,5 +1,6 @@
 
 # JavaScript Terminology
+What the rumpelstiltskin principle has taught us is that to name something empowers you. But, to truly understand is to know the nuances.
 ## Expressions vs. Statements
 A **statement** is an instruction that is executed by a program, whereas, an **expression** is a piece of code that produces a value.
 ## Callback Function vs. Function Definition

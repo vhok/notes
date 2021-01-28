@@ -70,7 +70,7 @@ array.unshift(item);
 
 array.shift(); 
 // description: Removes an element from the start of the array.
-// return: removed elemenbt
+// return: removed element
 
 array.indexOf(item); 
 // description: Returns the index of the first occurrence of a searched item.
@@ -84,5 +84,12 @@ array.slice(indexStart, indexEnd);
 // description: Copies the array. If a negative indexStart is specified, will extract from last elemnent.
 // optional: indexStart, indexEnd
 // return: copied array
-
 ```
+
+## Primitive Types
+| Type | Notes |
+| number, NaN | number | NaN is a number because javascript expects a number. |
+| string |  |
+| boolean | true/false |
+| BigInt | Enables expressions of numbers greater than 2^53 - 1. |
+| Symbol | Represents something unique. Primarily used as an identifier for object properties. |

@@ -29,8 +29,12 @@ const doSomething = function(parameter) {
 
 Arrow Function  
   
-Unlike function declaration and function expression. Does not have its own binding for *this*.  
-Therefore, *this* will refer to the *this* of the scope it's contained in.
+- Unlike function declaration and function expression. The arrow function does not have its own binding for *this*.  
+  Therefore, *this* will refer to the *this* of the scope it's contained in.
+  
+Tips:
+- () may be ommitted if only one parameter is defined.
+- return and {} may be omitted if the function code block returns a value and nothing else.
 ```javascript
 const doSomething = (parameter) => {
   return parameter;
@@ -40,13 +44,13 @@ const doSomething = (parameter) => {
 ## Key Array Methods
 Mapping
 ```javascript
-array.map( function(element) {
+array.map( (element) => {
   return element * 10;
 });
 ```
 Filter
 ```javascript
-array.filter( function(element) {
+array.filter( (element) => {
   return element > 0 ? true : false;
 });
 ```
@@ -54,7 +58,7 @@ Reduce
 - In addition to the callback function, an optional argument to initialize total can be passed.  
 - If no value is specified, it defaults to the object type to match that of the array elements.
 ```javascript
-array.reduce( function(total, element) {
+array.reduce( (total, element) => {
   return total + element;
 });
 ```
@@ -63,7 +67,7 @@ array.reduce( function(total, element) {
 ```javascript
 array.length
 
-array.forEach( function(element, index, array) ) {}; 
+array.forEach( (element, index, array) => {}); 
 // description: Loops over elements. Executes a callback with each iteration.
 // optional: index, array
 

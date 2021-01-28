@@ -43,6 +43,7 @@ const doSomething = (parameter) => {
 
 ## Key Array Methods
 Mapping
+one-to-one
 ```javascript
 array.map( (element) => {
   return element * 10;
@@ -54,7 +55,8 @@ array.filter( (element) => {
   return element > 0 ? true : false;
 });
 ```
-Reduce  
+Reduce
+many-to-one
 - In addition to the callback function, an optional argument to initialize total can be passed.  
 - If no value is specified, it defaults to the object type to match that of the array elements.
 ```javascript

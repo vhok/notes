@@ -92,5 +92,5 @@ array.slice(indexStart, indexEnd);
 | number, NaN | number | NaN is a number because javascript expects a number. |
 | string |  |
 | boolean | true/false |
-| BigInt | Enables expressions of numbers greater than 2^53 - 1. |
+| BigInt | Enables expressions of numbers greater than 2⁵³ - 1. |
 | Symbol | Represents something unique. Primarily used as an identifier for object properties. |

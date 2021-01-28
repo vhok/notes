@@ -84,11 +84,52 @@ array.splice(index, numberOfItemsToRemove);
 // return: new array with items removed
 
 array.slice(indexStart, indexEnd); 
-// description: Copies the array. If a negative indexStart is specified, will extract from last elemnent.
+// description: If a negative indexStart is specified, will extract from last elemnent.
 // optional: indexStart, indexEnd
-// return: copied array
+// return: copy of array from indexStart (inclusive) to indexEnd(exclusive).
 ```
+## Common String Methods & Properties
+```javascript
+string.length;
 
+string[0]; 
+// description: Iterable objects can have elements accessed.
+
+string.indexOf(substring);
+// return: index where occurance happens.
+
+string.slice(indexStart, indexEnd);
+// description: If indexStart is negative, it references from end of string.
+// optional: indexEnd
+// return: copy of substring from indexStart (inclusive) to indexEnd (exclusive).
+
+string.toLowerCase();
+// return: copy of string in lowercase.
+
+string.toUpperCase();
+// return: copy of string in uppercase.
+
+string.startsWith(substring);
+// return: boolean
+
+string.endsWith(substring);
+// return: boolean
+
+string.includes(substring);
+// return: boolean
+
+string.charAt(index);
+// return: character as a string
+
+string.split(splitBefore);
+// return: an array of substring elements where split occurs just before splitBefore.
+
+string.replace(stringToReplace, stringThatReplaces);
+// return: a new string where indicated substrings are replaced.
+
+string.repeat(numCopies);
+// return: a new string with concatenated original numCopies times.
+```
 ## Primitive Types
 | Type | Notes |
 | --- | --- |

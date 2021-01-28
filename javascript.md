@@ -22,6 +22,7 @@ const doSomething = function(parameter) {
 ```
 
 Arrow Function  
+Unlike function declaration and function expression. Does not have its own binding for *this*.  Therefore, *this* will refer to the object in which it's contained in.
 ```javascript
 const doSomething = (parameter) => {
   return parameter;

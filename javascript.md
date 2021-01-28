@@ -1,12 +1,12 @@
 # JavaScript Cheat Sheet
 ### Table of Contents
-[Function Definition](#3-methods-for-writing-function-definition)  
+[Function Definition](#3-ways-of-writing-function-definition)  
 [Key Array Methods](#key-array-methods)  
 [Common Array Methods & Properties](#common-array-methods--properties)  
 [Common String Methods & Properties](#common-string-methods--properties)  
 [Primitive Types](#primitive-types)  
 
-## 3 Methods for Writing Function Definition
+## 3 Ways of Writing Function Definition
 Function Declaration  
 - Assigns a value to a variable with identifier doSomething in the **current scope**.
 - Variable is **hoisted** to the top of current slope.

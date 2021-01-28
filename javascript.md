@@ -90,7 +90,7 @@ array.slice(indexStart, indexEnd);
 | Type | Notes |
 | --- | --- |
 | number, NaN | number | NaN is a number because JavaScript expects a number. |
-| string |  |
+| string | string |
 | boolean | true/false |
 | BigInt | Enables expressions of numbers greater than 2⁵³ - 1. const bigNumber = BigInt(someBigNumber). |
 | Symbol | Represents something unique. Primarily used as an identifier for object properties.<br />let sym = Symbol() or let sym = Symbol('foo'). |

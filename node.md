@@ -14,7 +14,7 @@ npm install <node package>
 ## Useful Node Packages
 ### lite-server
 - Creates a development server that can auto-update the page as files change.
-- --save-dev option specifies that package is for development purpose only.
+- `--save-dev` option specifies that package is for development purpose only.
 ```
 npm install --save-dev lite-server
 ```

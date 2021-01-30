@@ -6,10 +6,15 @@ Creating a package.json file for your project
 ```
 npm init
 ```
-Installing project dependencies
+Installing a new dependency
 ```
 npm install <node package>
 ```
+Installation node package for all dependencies
+```
+npm install
+```
+
 
 ## Useful Node Packages
 ### lite-server

@@ -1,5 +1,5 @@
 # Node Cheat Sheet
-## What is node.js?
+## What is Node.js?
 Node.js is a runtime environment that allows us to execute JavaScript code outside a web browser. It is particularly useful in running server-side scripts in the backend environment.
 ## npm Commands
 Creating a package.json file for your project

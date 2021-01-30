@@ -1,7 +1,7 @@
 # TypeScript
 
 ## Getting Started
-- Use node to install TypesSript.
+- Use npm to install TypesSript.
   ```
   npm install -g typescript
   ```

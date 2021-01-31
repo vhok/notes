@@ -11,4 +11,4 @@ A **primitive type** is an immutable value meaning it cannot be modify or change
 A **dynamically typed** programming language such as JavaScript has variables whose type *can* change during runtime. Whereas, a **statically typed** programming language is defined at development and not *supposed to*¹ change during runtime such as TypeScript.
 
 ## Footer
-¹See more information in TypeScript.md notes.
+¹See more information in TypeScript.md notes on working in a smaller domain of probable causes.

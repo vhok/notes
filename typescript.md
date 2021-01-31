@@ -83,7 +83,7 @@ const person: {
 | object | Yes | Yes | key: <value> pair |
 | array | Yes | Yes | [element1, element2, ...] |
 | tuple | Yes | No | [name, age] - fixed **length** and **type** |
-| enum | Yes | No | enum { NEW, OLD } Specific identifier or global constant for represent as value with a human readable label |
+| enum | Yes | No | enum { NEW, OLD } - specific identifier or global constant for represent as value with a human readable label |
 
 ## Notes
 - TypeScript's type system only helps you *during development* (ie before the code gets compiled). It's a *sanity check*.

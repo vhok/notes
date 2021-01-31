@@ -10,19 +10,69 @@
   ```
   tsc <typescript-file.ts>
   ```
-## Syntax
-### Annotations
-Function parameters
+## Annotations
+### Function parameters
 ```typescript
 function doSomething(num: number, phrase: string, flag: boolean) {
 
 }
 ```
-Variable assignment
+### Variable assignment
 - Typically good practice when type cannot be *inferred*.
 ```typescript
 const num: number;
 let word: string;
+```
+### Arrays
+TypeScript is able to infer the array if element types are identical
+```typescript
+const array = ['hello', 'world']
+// TypeScript yields - array: string[]
+```
+TypeScript is able to infer *union types* (more than one type)
+```typescript
+const orders = [5, 'cakes']
+// TypeScript yields - tuple: (number | string)[]
+```
+Uninferrable arrays can be annotated as follows
+```typescript
+const array: string[];
+```
+Mixed arrays
+- Flexible, but doesn't take advantage of TypeScript
+```typescript
+const array: any[];
+```
+### Tuples (Fixed length data structure)
+Great if you want to preserve a certain array data structure.
+```typescript
+let orders: tuple[number, string];
+
+order = [2, 'cakes'];
+```
+A big "gotcha" is that push method works on tuples and won't throw an error.
+```typescript
+orders.push('pie');
+// [2, 'cakes', 'pie']
+```
+Will guard against binding to different length arrays.
+```typescript
+orders = [2, 'cakes', 'pie'];
+// ERROR
+```
+### Enums
+
+## Object Type Representation
+```typescript
+// This is not a good example because without intervention these properties are already inferred. But, for examples sake, we demonstrate how to annotate object properties.
+// However, you may need to include if there's a property whose inference needs to be explicitly overwritten (eg tuples).
+const person: {
+  name: string;
+  age: number;
+} = {
+  name: 'John',
+  age: 30
+};
 ```
 ## Available Types
 | Type | TypeScript | JavaScript | Notes |
@@ -31,6 +81,9 @@ let word: string;
 | string | Yes | Yes | text |
 | boolean | Yes | Yes | true/false |
 | object | Yes | Yes | key: <value> pair |
+| array | Yes | Yes | [element1, element2, ...] |
+| tuple | Yes | No | [name, age] - fixed **length** and **type** |
+| enum | Yes | No | enum { NEW, OLD } Specific identifier or global constant for represent as value with a human readable label |
 
 ## Notes
 - TypeScript's type system only helps you *during development* (ie before the code gets compiled). It's a *sanity check*.

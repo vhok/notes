@@ -34,7 +34,7 @@ TypeScript is able to infer *union types* (more than one type)
 const orders = [5, 'cakes']
 // TypeScript yields - tuple: (number | string)[]
 ```
-Uninferrable arrays can be annotated as follows
+Arrays can be annotated as follows
 ```typescript
 const array: string[];
 ```

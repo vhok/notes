@@ -24,7 +24,7 @@ const num: number;
 let word: string;
 ```
 ### Arrays
-TypeScript is able to infer the array if element types are identical
+TypeScript is able to infer arrays
 ```typescript
 const array = ['hello', 'world']
 // TypeScript yields - array: string[]

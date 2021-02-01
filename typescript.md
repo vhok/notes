@@ -1,7 +1,7 @@
 # TypeScript Cheat Sheet
 
 ## Getting Started
-- Use npm to install TypesSript.
+- Use npm to install TypesSript with `-g` flag for global use.
   ```
   npm install -g typescript
   ```

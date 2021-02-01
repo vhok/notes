@@ -117,4 +117,4 @@ const person: {
 
 ## Tips
 - When working in TypeScript keep the compiled JavaScript file closed to prevent error messages on duplicate implementations.
-- Explicitly annotating an object as 'object' will throw errors if you try to access the properties. This is because an annotation of 'object' doesn't provide information about   properties.
+- Explicitly annotating an object as 'object' will throw errors if you try to access the properties. This is because 'object' doesn't provide information about properties.

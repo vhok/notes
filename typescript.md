@@ -1,4 +1,4 @@
-# TypeScript
+# TypeScript Cheat Sheet
 
 ## Getting Started
 - Use npm to install TypesSript.
@@ -10,20 +10,7 @@
   ```
   tsc <typescript-file.ts>
   ```
-## Annotations
-### Function parameters
-```typescript
-function doSomething(num: number, phrase: string, flag: boolean) {
-
-}
-```
-### Function return type
-Add colon to end of the **function signature** to state return type
-```typescript
-function doSomething(num: number, phrase: string, flag: boolean): string {
-  return phrase;
-}
-```
+## Annotations for variables
 ### Variable assignment
 - Typically good practice when type cannot be *inferred*.
 ```typescript
@@ -98,7 +85,43 @@ const status: 'online' | 'offline';
 const array: any[];
 const data: any;
 ```
+## Annotations for Functions
+### Parameters
+```typescript
+function doSomething(num: number, phrase: string, flag: boolean) {
 
+}
+```
+### Return types
+Add colon to end of the **function signature** to state return type
+- if return type can be inferred then best practice is to leave out the annotation.
+```typescript
+function doSomething(num: number, phrase: string, flag: boolean): string {
+  return phrase;
+}
+```
+### Function Type
+Variables can be assigned a function type if it's expected that a **pointer** to a function will be assigned.
+```typescript
+let combineValues: Function;
+```
+However, the above variable would accept a pointer to *any* function. In order to be more specific we can use the following:
+```typescript
+let combineValues: (a: number, b: number) => number;
+```
+### Void
+If no return statement exists and return type of function is not set. TypeScript infers function return type as void. This differs from undefined in that void means no return statement at all. Where as, undefined indicated a return statement where a value is not returned.
+```typescript
+function add(num1: number, num2: number) {
+  console.log(num1+num2);
+}
+// add -> void
+function add(num1: number, num2: number) {
+  console.log(num1+num2);
+  return;
+}
+// add -> undefined
+```
 ## Object Type Representation
 ```typescript
 // This is not a good example because without intervention these properties are already inferred. But, for examples sake, we demonstrate how to annotate object properties.
@@ -133,6 +156,8 @@ const input: Combinable;
 | any | Yes | No | takes on any type (default JavaScript behaviour) |
 | union | Yes | No | mixed type variables |
 | literal | Yes | No | an exact value as a type (eg 2, "pair", 6.6) | 
+| void | Yes | No | No return statement (vs return statement without a value, ie undefined) |
+| function | Yes | No | a function |
 
 ## Notes
 - TypeScript's type system only helps you *during development* (ie before the code gets compiled). It's a *sanity check*.

@@ -67,23 +67,39 @@ enum Role { ADMIN = 5, READ_ONLY, READ_WRITE };
 // ADMIN -> 5, READ_ONLY -> 6, READ_WRITE -> 7
 ```
 ### Unions
-Creating unions
 - Will throw errors in certain expressions because TypeScript doesn't analyze the types inside the union.
 - Will recognize error handling if-statements for union expressions.
 ```typescript
 const input: number | string;
 ```
 ### Literals
-Creating literals
-- Similar to unions except the types themselves are specific values.
+Similar to unions except the types themselves are specific values.
 ```typescript
 const status: 'online' | 'offline'; 
 ```
 ### Any
-- Not recommended as it bypasses the type checking behaviour of TypeScript
+Not recommended as it bypasses the type checking behaviour of TypeScript
 ```typescript
 const array: any[];
 const data: any;
+```
+### Unknown
+Unlike *any* unknown is more strict and requires the value to be checked before using.
+```typescript
+let userInput: unknown;
+let userName: string;
+```
+This will throw an error:
+```typescript
+userInput = 'Joe';
+userName = userInput;
+```
+This will work:
+```typescript
+userInput = 'Joe';
+if(typeof userInput === 'string') {
+  userName = userInput;
+}
 ```
 ## Annotations for Functions
 ### Parameters
@@ -92,7 +108,7 @@ function doSomething(num: number, phrase: string, flag: boolean) {
 
 }
 ```
-### Return types
+### Return Types
 Add colon to end of the **function signature** to state return type
 - if return type can be inferred then best practice is to leave out the annotation.
 ```typescript
@@ -111,6 +127,7 @@ let combineValues: (a: number, b: number) => number;
 ```
 ### Void
 If no return statement exists and return type of function is not set. TypeScript infers function return type as void. This differs from undefined in that void means no return statement at all. Where as, undefined indicated a return statement where a value is not returned.
+- a use case could be the return type when defining callback function passed in as a parameter to another function.
 ```typescript
 function add(num1: number, num2: number) {
   console.log(num1+num2);
@@ -121,6 +138,19 @@ function add(num1: number, num2: number) {
   return;
 }
 // add -> undefined
+```
+### Never
+If a value is *never* expected to return (eg an error generating function that is expected to crash).
+- never isn't inferred because it wasn't built into the first versions of TypeScript.
+- examples of never: error functions, functions with infinite loops, etc...
+```typescript
+function generateError(message: string, code: number): never {
+    // Throw an object as an error
+    throw {message: message, errorCode: code };
+}
+
+generateError('An error occured!', 500);
+// -> Error Object
 ```
 ## Object Type Representation
 ```typescript
@@ -153,11 +183,13 @@ const input: Combinable;
 | array | Yes | Yes | [element1, element2, ...] |
 | tuple | Yes | No | [name, age] - fixed **length** and **type** |
 | enum | Yes | No | enum { NEW, OLD } - enumerated lists, a list of label-value pairs |
-| any | Yes | No | takes on any type (default JavaScript behaviour) |
 | union | Yes | No | mixed type variables |
 | literal | Yes | No | an exact value as a type (eg 2, "pair", 6.6) | 
-| void | Yes | No | No return statement (vs return statement without a value, ie undefined) |
+| any | Yes | No | takes on any type (default JavaScript behaviour) |
+| unknown | Yes | No | a type that is unknown (or a value that needs to be checked) |
 | function | Yes | No | a function |
+| void | Yes | No | No return statement (vs return statement without a value, ie undefined) |
+| never | Yes | No | when a value is *never* expected to return |
 
 ## Notes
 - TypeScript's type system only helps you *during development* (ie before the code gets compiled). It's a *sanity check*.

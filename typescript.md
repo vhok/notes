@@ -76,7 +76,12 @@ Offset enum values
 ```tpyescript
 enum Role { ADMIN = 5, READ_ONLY, READ_WRITE };
 // ADMIN -> 5, READ_ONLY -> 6, READ_WRITE -> 7
-
+```
+### Any
+- Not recommended as it does not provide benefits of TypeScript.
+```typescript
+const array: any[];
+const data: any;
 ```
 ## Object Type Representation
 ```typescript
@@ -100,6 +105,7 @@ const person: {
 | array | Yes | Yes | [element1, element2, ...] |
 | tuple | Yes | No | [name, age] - fixed **length** and **type** |
 | enum | Yes | No | enum { NEW, OLD } - enumerated lists, a list of label-value pairs |
+| any | Yes | No | flexible |
 
 ## Notes
 - TypeScript's type system only helps you *during development* (ie before the code gets compiled). It's a *sanity check*.

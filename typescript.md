@@ -17,6 +17,13 @@ function doSomething(num: number, phrase: string, flag: boolean) {
 
 }
 ```
+### Function return type
+Add colon to end of the **function signature** to state return type
+```typescript
+function doSomething(num: number, phrase: string, flag: boolean): string {
+  return phrase;
+}
+```
 ### Variable assignment
 - Typically good practice when type cannot be *inferred*.
 ```typescript
@@ -103,6 +110,15 @@ const person: {
   name: 'John',
   age: 30
 };
+```
+## Type Alias'
+Nicknaming type annotations
+```typescript
+// eg for unions
+type Combinable = number | string;
+
+const input: Combinable;
+// input -> number | string
 ```
 ## Available Types
 | Type | TypeScript | JavaScript | Notes |

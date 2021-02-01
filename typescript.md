@@ -179,7 +179,7 @@ const input: Combinable;
 | number | Yes | Yes | integers, floats, etc... are all the same |
 | string | Yes | Yes | text |
 | boolean | Yes | Yes | true/false |
-| object | Yes | Yes | key: <value> pair |
+| object | Yes | Yes | A set of `key: <value>` pairs |
 | array | Yes | Yes | [element1, element2, ...] |
 | tuple | Yes | No | [name, age] - fixed **length** and **type** |
 | enum | Yes | No | enum { NEW, OLD } - enumerated lists, a list of label-value pairs |

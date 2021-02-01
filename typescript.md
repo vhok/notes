@@ -73,7 +73,7 @@ Role.ADMIN;
 // Role.ADMIN -> 0
 ```
 Offset enum values
-```tpyescript
+```typescript
 enum Role { ADMIN = 5, READ_ONLY, READ_WRITE };
 // ADMIN -> 5, READ_ONLY -> 6, READ_WRITE -> 7
 ```

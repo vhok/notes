@@ -24,12 +24,12 @@ const num: number;
 let word: string;
 ```
 ### Arrays
-TypeScript is able to infer arrays
+TypeScript is able to infer type of arrays
 ```typescript
 const array = ['hello', 'world']
 // array: string[]
 ```
-TypeScript is able to infer *union types* (more than one type)
+TypeScript is able to infer *union types* (mixed type)
 ```typescript
 const orders = [5, 'cakes']
 // orders: (number | string)[]
@@ -37,11 +37,6 @@ const orders = [5, 'cakes']
 Arrays can be annotated as follows
 ```typescript
 const array: string[];
-```
-Mixed arrays
-- Flexible, but doesn't take advantage of TypeScript
-```typescript
-const array: any[];
 ```
 ### Tuples (Fixed length data structure)
 Creating Tuples
@@ -77,12 +72,26 @@ Offset enum values
 enum Role { ADMIN = 5, READ_ONLY, READ_WRITE };
 // ADMIN -> 5, READ_ONLY -> 6, READ_WRITE -> 7
 ```
+### Unions
+Creating unions
+- Will throw errors in certain expressions because TypeScript doesn't analyze the types inside the union.
+- Will recognize error handling if-statements for union expressions.
+```typescript
+const input: number | string;
+```
+### Literals
+Creating literals
+- Similar to unions except the types themselves are specific values.
+```typescript
+const status: 'online' | 'offline'; 
+```
 ### Any
 - Not recommended as it bypasses the type checking behaviour of TypeScript
 ```typescript
 const array: any[];
 const data: any;
 ```
+
 ## Object Type Representation
 ```typescript
 // This is not a good example because without intervention these properties are already inferred. But, for examples sake, we demonstrate how to annotate object properties.
@@ -105,7 +114,9 @@ const person: {
 | array | Yes | Yes | [element1, element2, ...] |
 | tuple | Yes | No | [name, age] - fixed **length** and **type** |
 | enum | Yes | No | enum { NEW, OLD } - enumerated lists, a list of label-value pairs |
-| any | Yes | No | takes on any value (normal JavaScript behaviour) |
+| any | Yes | No | takes on any type (default JavaScript behaviour) |
+| union | Yes | No | mixed type variables |
+| literal | Yes | No | an exact value as a type (eg 2, "pair", 6.6) | 
 
 ## Notes
 - TypeScript's type system only helps you *during development* (ie before the code gets compiled). It's a *sanity check*.

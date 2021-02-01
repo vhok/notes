@@ -114,8 +114,7 @@ const person: {
   However, it's still advantageous because we know that the error can be narrowed down to issues caused at runtime rather than during development 
   (ie eliminating a set of possible   causes). This saves a lot of troubleshooting time.
  - Variable assignment doesn't require explicit definition of their type because TypeScript has a feature called **type inference**. TypeScript does its best to understand which    type is being assigned. However, it's good practice to include when a value hasn't been clearly defined for the variable (ie when type cannot be inferred).
- - Explicitly annotating an object as 'object' will throw errors if you try to access the properties. This is because being explicit indicates we have an object where we don't      give any information to TypeScript.
 
 ## Tips
 - When working in TypeScript keep the compiled JavaScript file closed to prevent error messages on duplicate implementations.
-
+- Explicitly annotating an object as 'object' will throw errors if you try to access the properties. This is because an annotation of 'object' doesn't provide information about   properties.

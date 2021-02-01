@@ -44,7 +44,8 @@ Mixed arrays
 const array: any[];
 ```
 ### Tuples (Fixed length data structure)
-Great if you want to preserve a certain array data structure.
+Creating Tuples
+- If you want to be explicit and preserve a certain array data structure.
 ```typescript
 let orders: tuple[number, string];
 
@@ -61,7 +62,22 @@ orders = [2, 'cakes', 'pie'];
 // ERROR
 ```
 ### Enums
+Creating enums
+- If you need a value referencing system.
+- enum values aren't restricted to only numbers.
+```typescript
+enum Role { ADMIN, READ_ONLY, READ_WRITE };
+// ADMIN -> 0, READ_ONLY -> 1, READ_WRITE -> 2
 
+Role.ADMIN;
+// Role.ADMIN -> 0
+```
+Offset enum values
+```tpyescript
+enum Role { ADMIN = 5, READ_ONLY, READ_WRITE };
+// ADMIN -> 5, READ_ONLY -> 6, READ_WRITE -> 7
+
+```
 ## Object Type Representation
 ```typescript
 // This is not a good example because without intervention these properties are already inferred. But, for examples sake, we demonstrate how to annotate object properties.
@@ -83,7 +99,7 @@ const person: {
 | object | Yes | Yes | key: <value> pair |
 | array | Yes | Yes | [element1, element2, ...] |
 | tuple | Yes | No | [name, age] - fixed **length** and **type** |
-| enum | Yes | No | enum { NEW, OLD } - specific identifier or global constant for represent as value with a human readable label |
+| enum | Yes | No | enum { NEW, OLD } - enumerated lists, a list of label-value pairs |
 
 ## Notes
 - TypeScript's type system only helps you *during development* (ie before the code gets compiled). It's a *sanity check*.

@@ -10,8 +10,8 @@
   ```
   tsc <typescript-file.ts>
   ```
-## Annotations for variables
-### Variable assignment
+## Annotations for Variables
+### Variable Assignment
 - Typically good practice when type cannot be *inferred*.
 ```typescript
 const num: number;
@@ -140,7 +140,7 @@ function add(num1: number, num2: number) {
 // add -> undefined
 ```
 ### Never
-If a value is *never* expected to return (eg an error generating function that is expected to crash).
+If a value is *never* expected to return.
 - never isn't inferred because it wasn't built into the first versions of TypeScript.
 - examples of never: error functions, functions with infinite loops, etc...
 ```typescript

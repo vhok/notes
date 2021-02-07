@@ -5,7 +5,7 @@ Express is a Node *framework* that helps organize and structure web applications
 npm install express
 ```
 Barebones of an express server:
-```javacsript
+```javascript
 const express = require('express');
 
 const app = express();

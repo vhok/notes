@@ -44,6 +44,7 @@ npm start
 - Allows code to be written directly in terminal
 - `Tab` enables smart selection of available commands
 - Exit REPL using `.exit` or `Ctrl + c`
+  
 Starts node REPL (Read Evaluate Print Loop)
 ```
 node

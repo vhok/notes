@@ -1,6 +1,6 @@
 # Express Cheat Sheet
 Express is a Node *framework* that helps organize and structure web applications built with Node.
-## Getting started
+## Getting Started
 ```
 npm install express
 ```

@@ -5,6 +5,10 @@
   ```
   npm install -g typescript
   ```
+- Create React Project Using TypeScript
+  ```
+  npx create-react-app <app name> --template typescript
+  ```
 - Create script files using .ts extension
 - Compile using tsc command
   ```

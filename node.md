@@ -32,7 +32,7 @@ Importing Modules
   ```javascript
   const <module name> = require('./<module name>.js');
   
-  const value = <module name>.<module method>();
+  const value = <module name>.<module function>();
   ```
 
 ### External Modules
@@ -40,7 +40,7 @@ Use npm:
 1. `npm init` (If starting without a package.json file)
 2. `npm install <package name>` (This downloads module and creates a dependency)
 3. require the module `const <variable name> = require('<module name>')` inside the script file
-4. use the module `<variable name>.<method>();`
+4. use the module `<variable name>.<function>();`
 
 ## Useful Node Packages
 ### lite-server

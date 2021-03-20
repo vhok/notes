@@ -32,7 +32,7 @@ Importing Modules
   ```javascript
   const <module name> = require('./<module name>.js');
   
-  const value = <module name>.<module function>();
+  const value = <module name>.<module function>;
   ```
 
 ### External Modules

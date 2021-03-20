@@ -50,3 +50,10 @@ Starts node REPL (Read Evaluate Print Loop)
 node
 ```
 
+## Node Arguments in Terminal
+- process.argv[0] represents the node binary
+- process.argv[1] represents the javascript file
+- process.argv[2] represents the first argument passed to program run in node
+  ```javascript
+  const argument = process.argv[2];
+  ```

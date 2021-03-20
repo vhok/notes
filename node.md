@@ -3,7 +3,7 @@
 Node.js is a runtime environment that allows us to execute JavaScript code outside a web browser. It is particularly useful in running server-side scripts in the backend environment.
 ## Node Modules
 - Libraries supported by Node
-### Native Modules
+### Installed Modules
 - `require` is the equivalent of `import`. But, Node and V8 Chrome Engine existed before ES6. The import keyword works for Node. However, current best practices recommend continuing to use require.
 - Visit nodejs.org/api for available modules.
 Example using file system module:
@@ -16,6 +16,25 @@ const fs = require('fs');
 fs.copyFileSync("file1.txt", "file2.txt");
 // Copies content from one file to another.
 ```
+### Internal Modules
+Exporting Modules
+- `module.exports` is an object created by a specific `module`. This object specifies whether a module can be exported to be used in other JavaScript files.
+  ```javascript
+  module.exports = {
+    <module name>: <module name>
+  };
+  ```
+- `exports` is a shorthand for `module.exports` that can't be used interchangably.
+- `exports` is assigned `module.exports` prior to the module being evaluated.
+
+Importing Modules
+- Use require keyword to import modules:
+  ```javascript
+  const <module name> = require('./<module name>.js');
+  
+  const value = <module name>.<module method>();
+  ```
+
 ### External Modules
 Use npm:
 1. `npm init` (If starting without a package.json file)

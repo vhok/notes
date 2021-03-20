@@ -4,6 +4,7 @@ Node.js is a runtime environment that allows us to execute JavaScript code outsi
 ## Node Modules
 - Libraries supported by Node
 ### Native Modules
+- `require` is the equivalent of `import`. But, Node and V8 Chrome Engine existed before ES6. The import keyword works for Node. However, current best practices recommend continuing to use require.
 - Visit nodejs.org/api for available modules.
 Example using file system module:
 ```javascript
@@ -53,7 +54,22 @@ node
 ## Node Arguments in Terminal
 - process.argv[0] represents the node binary
 - process.argv[1] represents the javascript file
-- process.argv[2] represents the first argument passed to program run in node
+- process.argv[2] represents the first argument passed to program run in Node
   ```javascript
   const argument = process.argv[2];
   ```
+  
+  ## Environment
+  ### Browser vs. Node
+  The global object for the browser is
+  ```
+  window
+  ```
+  The global object for Node is
+  ```
+  global
+  ```
+  ### process.env
+  process.env is a global object injected by Node at runtime.
+  - Useful during deployment (e.g. server address change from development to production).
+   
